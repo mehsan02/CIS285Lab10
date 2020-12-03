@@ -59,4 +59,49 @@ public class testSelectionSort {
 
         assertArrayEquals("check", Sortedarr, actualArr);
     }
+		public void testMixed(){
+
+        /** Test data contains with both positive, negative and zeros **/
+    	int[] arr = new int[5];
+        arr[0] = -8;
+        arr[1] = -9;
+        arr[2] = 7;
+        arr[3] = 10;
+        arr[4] = 0;
+
+        int[] Sortedarr = new int[5];
+        Sortedarr[0] = -9;
+        Sortedarr[1] = -8;
+        Sortedarr[2] = 0;
+        Sortedarr[3] = 7;
+        Sortedarr[4] = 10;
+
+        SelectionSort value = new SelectionSort();
+        int[] actualArr = value.basicSelectionSort(arr);
+
+        assertArrayEquals("check", Sortedarr, actualArr);
+    }
+
+    public void testDuplicates(){
+
+        /** Test data contains duplicates **/
+    	int[] arr = new int[5];
+        arr[0] = 8;
+        arr[1] = 8;
+        arr[2] = -7;
+        arr[3] = 10;
+        arr[4] = 2;
+
+        int[] Sortedarr = new int[5];
+        Sortedarr[0] = -7;
+        Sortedarr[1] = 2;
+        Sortedarr[2] = 8;
+        Sortedarr[3] = 8;
+        Sortedarr[4] = 10;
+
+        SelectionSort value = new SelectionSort();
+        int[] actualArr = value.basicSelectionSort(arr);
+
+        assertArrayEquals("check", Sortedarr, actualArr);
+    }
   }
